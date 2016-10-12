@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Flickr Download",
+	"version": "1.0",
+	"icons": {
+	  "48": "icons/icon-48.png",
+	  "96": "icons/icon-96.png"
+	},
+	"browser_action": {
+		"default_icon": "icons/icon.png",
+		"default_title": "flickr"
+	},
+	"content_scripts": [{
+	 	"matches": [
+			"<all_urls>"
+    	  	],
+    	  	"js": ["./scripts/jquery-3.1.1.min.js"]
+    	}],
+	"background": {
+		"scripts": ["./scripts/popup.js"]
+	},
+	"permissions": [
+		"activeTab"
+	]
+}
